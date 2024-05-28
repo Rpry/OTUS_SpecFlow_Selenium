@@ -33,11 +33,10 @@ namespace CalculatorSelenium.Specs.Drivers
 
             var chromeOptions = new ChromeOptions();
 
-            var chromeDriver = new ChromeDriver(chromeDriverService, chromeOptions);
+            var chromeDriver = new ChromeDriver(chromeOptions);
 
             return chromeDriver;
         }
-
         /// <summary>
         /// Disposes the Selenium web driver (closing the browser)
         /// </summary>

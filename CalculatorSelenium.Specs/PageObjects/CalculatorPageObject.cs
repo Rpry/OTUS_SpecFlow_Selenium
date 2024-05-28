@@ -24,7 +24,7 @@ namespace CalculatorSelenium.Specs.PageObjects
         }
 
         //Finding elements by ID
-        private IWebElement FirstNumberElement => _webDriver.FindElement(By.Id("first-number"));
+        private IWebElement FirstNumberElement => _webDriver.FindElement(By.XPath("//input[@id='first-number']"));
         private IWebElement SecondNumberElement => _webDriver.FindElement(By.Id("second-number"));
         private IWebElement AddButtonElement => _webDriver.FindElement(By.Id("add-button"));
         private IWebElement ResultElement => _webDriver.FindElement(By.Id("result"));
@@ -77,7 +77,7 @@ namespace CalculatorSelenium.Specs.PageObjects
                 () => ResultElement.GetAttribute("value"),
                 result => !string.IsNullOrEmpty(result));
         }
-
+        
         public string WaitForEmptyResult()
         {
             //Wait for the result to be empty
